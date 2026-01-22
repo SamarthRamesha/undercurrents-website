@@ -87,7 +87,7 @@ const Members: React.FC = () => {
                       <img 
                         src={member.image} 
                         alt={member.name}
-                        className={`w-full h-full object-cover grayscale contrast-100 ${
+                        className={`w-full h-full object-cover grayscale contrast-150 ${
                           member.name === "Nimit Jain"
                             ? "brightness-120"
                             : "brightness-95"
