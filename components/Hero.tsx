@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       {/* BACKGROUND IMAGE */}
       <div
         className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-center md:bg-[position:50%_12%] scale-105 pointer-events-none"
-        style={{ backgroundImage: `url('/images/background.png')` }}
+        style={{ backgroundImage: `url('./public/images/background.png')` }}
       />
 
       {/* DARK BASE OVERLAY (slight global darkening for contrast) */}
