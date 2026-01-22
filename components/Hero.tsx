@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-10 bg-black/20 pointer-events-none" />
 
       {/* CINEMATIC BOTTOM FADE */}
-      <div className="absolute inset-x-0 bottom-0 z-20 h-[50%] bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 z-20 h-[60%] bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
 
       {/* SUBTLE EDGE VIGNETTE */}
       <div className="absolute inset-0 z-20 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_55%,rgba(0,0,0,0.5)_100%)]" />
