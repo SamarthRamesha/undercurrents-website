@@ -4,25 +4,25 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-black px-4">
 
-      <link
-        rel="preload"
-        as="image"
-        href="/images/background.jpg"
+      {/* Preload hero image */}
+      <link rel="preload" as="image" href="/images/background.jpg" />
+
+      {/* BACKGROUND IMAGE (real <img> for speed) */}
+      <img
+        src="/images/background.jpg"
+        alt="Undercurrents background"
+        loading="eager"
+        decoding="async"
+        className="absolute inset-0 z-0 w-full h-full object-cover object-[50%_12%] scale-105 pointer-events-none"
       />
 
-      {/* BACKGROUND IMAGE */}
-      <div
-        className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-[position:50%_12%] md:scale-105 pointer-events-none"
-        style={{ backgroundImage: `url('/Users/macbramesha/Desktop/UndercurrentsWebsite/public/images/background.jpg')` }}
-      />
-
-      {/* VERY LIGHT GLOBAL DARKEN (keeps contrast but not crushing) */}
+      {/* VERY LIGHT GLOBAL DARKEN */}
       <div className="absolute inset-0 z-10 bg-black/10 pointer-events-none" />
 
-      {/* SMOOTH BOTTOM FADE INTO BLACK */}
+      {/* SMOOTH BOTTOM FADE */}
       <div className="absolute inset-x-0 bottom-0 z-20 h-[40%] bg-gradient-to-t from-black via-black/60 to-transparent pointer-events-none" />
 
-      {/* SOFT EDGE VIGNETTE (much lighter) */}
+      {/* SOFT EDGE VIGNETTE */}
       <div className="absolute inset-0 z-20 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_65%,rgba(0,0,0,0.35)_100%)]" />
 
       {/* CONTENT */}
