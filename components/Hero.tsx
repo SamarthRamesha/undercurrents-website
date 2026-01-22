@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       {/* BACKGROUND IMAGE */}
       <div
         className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-[position:50%_12%] md:scale-105 pointer-events-none"
-        style={{ backgroundImage: `url('/images/background.jpg')` }}
+        style={{ backgroundImage: `url('/Users/macbramesha/Desktop/UndercurrentsWebsite/public/images/background.jpg')` }}
       />
 
       {/* VERY LIGHT GLOBAL DARKEN (keeps contrast but not crushing) */}
