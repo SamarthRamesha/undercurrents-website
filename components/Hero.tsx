@@ -4,6 +4,12 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-black px-4">
 
+      <link
+        rel="preload"
+        as="image"
+        href="/images/background.jpg"
+      />
+
       {/* BACKGROUND IMAGE */}
       <div
         className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-[position:50%_12%] md:scale-105 pointer-events-none"

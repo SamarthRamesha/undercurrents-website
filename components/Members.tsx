@@ -13,6 +13,11 @@ const Members: React.FC = () => {
 
   return (
     <section id="members" className="bg-[#050505]">
+      <link
+        rel="preload"
+        as="image"
+        href="/images/background.jpg"
+      />
       {/* Intro Header */}
       <div className="pt-24 pb-12 px-6 text-center border-b border-white/5 bg-black">
         <h2 className="text-5xl md:text-7xl font-black mb-4 tracking-tighter uppercase text-rose-600" data-aos="fade-down">
