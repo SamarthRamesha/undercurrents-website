@@ -4,24 +4,14 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-black py-20 px-4">
       
-      {/* Background Image — TOP PRIORITY, NO BLUR */}
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0 
-          bg-[position:50%_1%] 
-          bg-no-repeat 
-          md:bg-cover 
-          bg-contain 
-          opacity-60 
-          md:scale-105 
-          scale-100 
-          pointer-events-none 
-          transition-opacity 
-          duration-1000"
-        style={{ backgroundImage: `url('/images/background.png')` }}
+        className="absolute inset-0 z-0 bg-[position:50%_15%] bg-no-repeat md:bg-cover bg-contain md:scale-105 scale-100 pointer-events-none"
+        style={{ backgroundImage: `url('/assets/images/background.png')` }}
       />
 
-      {/* Bottom Fade Only — NO TOP GRADIENT */}
-      <div className="absolute inset-x-0 bottom-0 z-10 h-1/3 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
+      {/* BOTTOM FADE VEIL (SMOOTH TRANSITION) */}
+      <div className="absolute inset-x-0 bottom-0 z-10 h-[45%] bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-20 text-center w-full max-w-6xl mx-auto flex flex-col items-center">
