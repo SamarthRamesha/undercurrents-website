@@ -2,17 +2,17 @@ import React from 'react';
 
 const Gallery: React.FC = () => {
   const images = [
-    '/images/gallery1.jpg',
-    '/images/gallery2.jpg',
-    '/images/gallery3.jpg',
-    '/images/gallery4.jpg',
-    '/images/gallery5.jpg',
-    '/images/gallery6.jpg',
-    '/images/gallery7.jpg',
-    '/images/gallery8.jpg',
-    '/images/gallery9.jpg',
-    '/images/gallery10.jpg',
-    '/images/gallery11.jpg',
+    '/images/gallery1.webp',
+    '/images/gallery2.webp',
+    '/images/gallery3.webp',
+    '/images/gallery4.webp',
+    '/images/gallery5.webp',
+    '/images/gallery6.webp',
+    '/images/gallery7.webp',
+    '/images/gallery8.webp',
+    '/images/gallery9.webp',
+    '/images/gallery10.webp',
+    '/images/gallery11.webp',
   ];
 
   return (
