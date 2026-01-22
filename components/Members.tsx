@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { MEMBERS } from '../constants.tsx';
 
 const Members: React.FC = () => {
-  // Reveal timing constants (ms)
   const TIMINGS = {
     IDENTITY_DELAY: 0,
     IMAGE_DELAY: 500,
@@ -25,25 +23,16 @@ const Members: React.FC = () => {
         </p>
       </div>
 
-      {/* 7 Member Reveal Tracks */}
       {MEMBERS.map((member, index) => {
         const trackId = `member-track-${member.id}`;
+
         return (
-          <div 
-            key={member.id} 
-            id={trackId}
-            className="relative h-[130vh]"
-          >
-            {/* 
-              Sticky Viewport 
-              Using flex-col and top-padding instead of justify-center 
-              to ensure the member name always starts at a mathematically consistent position.
-            */}
+          <div key={member.id} id={trackId} className="relative h-[130vh]">
             <div className="sticky top-0 h-screen w-full flex flex-col items-center pt-24 md:pt-32 px-8 overflow-hidden">
-              
-              {/* Ghost Counter - Purely decorative */}
+
+              {/* Ghost Counter */}
               <div 
-                className="absolute inset-0 flex items-center justify-center text-[30vw] font-black text-white/[0.01] pointer-events-none select-none z-0 uppercase italic overflow-hidden"
+                className="absolute inset-0 flex items-center justify-center text-[30vw] font-black text-white/[0.01] pointer-events-none select-none z-0 uppercase italic"
                 data-aos="fade-in"
                 data-aos-anchor={`#${trackId}`}
                 data-aos-duration="2000"
@@ -52,11 +41,11 @@ const Members: React.FC = () => {
               </div>
 
               <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
-                
-                {/* 1. IDENTITY (Reveals First) - Removed inconsistent mb-16, added member-identity-block */}
+
+                {/* Identity */}
                 <div 
-                  className="member-identity-block text-center w-full" 
-                  data-aos="fade-up" 
+                  className="text-center w-full"
+                  data-aos="fade-up"
                   data-aos-anchor={`#${trackId}`}
                   data-aos-delay={TIMINGS.IDENTITY_DELAY}
                   data-aos-duration={TIMINGS.DURATION}
@@ -64,14 +53,14 @@ const Members: React.FC = () => {
                   <p className="text-rose-600 font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-3">
                     {member.role}
                   </p>
-                  <h3 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.95] pb-2 break-words">
+                  <h3 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.95] pb-2">
                     {member.name}
                   </h3>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center w-full max-w-5xl">
-                  
-                  {/* 2. PHOTO (Reveals Second) */}
+
+                  {/* PHOTO */}
                   <div 
                     className="relative aspect-[4/5] w-full max-w-[260px] md:max-w-sm mx-auto lg:mx-0"
                     data-aos="zoom-in"
@@ -81,36 +70,35 @@ const Members: React.FC = () => {
                   >
                     <div className="absolute inset-0 border border-white/10 -translate-x-3 -translate-y-3" />
                     <div className="absolute inset-0 border border-rose-600 translate-x-3 translate-y-3 opacity-20" />
+
                     <div className="relative h-full w-full overflow-hidden bg-[#0a0a0a]">
-                      
-                      {/* IMAGE */}
+
+                      {/* IMAGE (BRIGHTENED BASELINE) */}
                       <img 
-                        src={member.image} 
+                        src={member.image}
                         alt={member.name}
-                        className={`w-full h-full object-cover grayscale contrast-150 ${
-                          member.name === "Nimit Jain"
-                            ? "brightness-120"
-                            : "brightness-95"
-                        }`}/>
+                        loading="lazy"
+                        className={`
+                          w-full h-full object-cover
+                          grayscale
+                          contrast-120
+                          ${member.name === "Nimit Jain" ? "brightness-115" : "brightness-105"}
+                        `}
+                      />
 
-                      {/* TOP FADE */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent pointer-events-none" />
+                      {/* SUBTLE EDGE VIGNETTE (ALL SIDES) */}
+                      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_50%,rgba(0,0,0,0.45)_100%)]" />
 
-                      {/* BOTTOM FADE */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
+                      {/* VERY LIGHT TOP FADE */}
+                      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/25 via-transparent to-transparent" />
 
-                      {/* LEFT FADE */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent pointer-events-none" />
+                      {/* VERY LIGHT BOTTOM FADE */}
+                      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
-                      {/* RIGHT FADE */}
-                      <div className="absolute inset-0 bg-gradient-to-l from-black/65 via-black/25 to-transparent pointer-events-none" />
-
-                      {/* EDGE SOFTENER (NO CORNER BIAS) */}
-                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_55%,rgba(0,0,0,0.6)_100%)] pointer-events-none" />
                     </div>
                   </div>
 
-                  {/* 3. STATS (Sequence of 3) */}
+                  {/* STATS */}
                   <div className="w-full flex flex-col justify-center">
                     <div 
                       className="mb-8 pb-3 border-b border-white/10"
@@ -122,16 +110,14 @@ const Members: React.FC = () => {
                         Biometric Output
                       </h4>
                     </div>
-                    
+
                     <div className="space-y-8">
                       {member.stats.map((stat, sIndex) => (
                         <div 
-                          key={sIndex} 
-                          className="space-y-3"
+                          key={sIndex}
                           data-aos="fade-up"
                           data-aos-anchor={`#${trackId}`}
                           data-aos-delay={TIMINGS.STAT_START_DELAY + (sIndex * TIMINGS.STAT_STEP)}
-                          data-aos-duration={TIMINGS.DURATION}
                         >
                           <div className="flex justify-between items-end">
                             <span className="text-[10px] uppercase font-bold tracking-[0.15em] text-white/50">
@@ -143,7 +129,7 @@ const Members: React.FC = () => {
                           </div>
                           <div className="h-[2px] w-full bg-white/5">
                             <div 
-                              className="h-full bg-rose-600 transition-all duration-[1500ms] ease-out shadow-[0_0_8px_rgba(225,29,72,0.4)]"
+                              className="h-full bg-rose-600 transition-all duration-[1500ms] ease-out"
                               style={{ width: `${stat.value}%` }}
                             />
                           </div>
@@ -151,9 +137,9 @@ const Members: React.FC = () => {
                       ))}
                     </div>
 
-                    {/* 4. METADATA (Final Reveal) - Using the global link-established-divider class */}
+                    {/* METADATA */}
                     <div 
-                      className="link-established-divider border-white/5 flex items-center justify-between text-[9px] text-gray-600 font-mono uppercase tracking-widest w-full"
+                      className="border-white/5 flex items-center justify-between text-[9px] text-gray-600 font-mono uppercase tracking-widest w-full mt-10"
                       data-aos="fade-up"
                       data-aos-anchor={`#${trackId}`}
                       data-aos-delay={TIMINGS.METADATA_DELAY}
@@ -167,18 +153,12 @@ const Members: React.FC = () => {
                         <span>VERIFIED</span>
                       </div>
                     </div>
+
                   </div>
 
                 </div>
               </div>
             </div>
-
-            {/* Symmetrical Section Divider */}
-            {index < MEMBERS.length - 1 && (
-              <div className="absolute bottom-[15vh] left-0 w-full px-12 md:px-24 z-20 pointer-events-none opacity-20">
-                <div className="h-px w-full bg-white/40" />
-              </div>
-            )}
           </div>
         );
       })}
