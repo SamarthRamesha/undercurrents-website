@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           pointer-events-none 
           transition-opacity 
           duration-1000"
-        style={{ backgroundImage: `url('/assets/images/background.png')` }}
+        style={{ backgroundImage: `url('/images/background.png')` }}
       />
 
       {/* Bottom Fade Only — NO TOP GRADIENT */}
