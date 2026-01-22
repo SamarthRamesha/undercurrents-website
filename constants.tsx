@@ -6,7 +6,7 @@ export const MEMBERS: BandMember[] = [
     id: '1',
     name: 'Nimit Jain',
     role: 'Growl Vocals',
-    image: './images/nimit.webp',
+    image: './public/images/nimit.webp',
     stats: [
       { label: 'number of mics possessed', value: 95 },
       { label: 'guys think from my head', value: 88 },
@@ -17,7 +17,7 @@ export const MEMBERS: BandMember[] = [
     id: '2',
     name: 'Samarth Ramesha',
     role: 'Guitar 01/Producer',
-    image: '/images/samarth.webp',
+    image: './public/images/samarth.webp',
     stats: [
       { label: 'weight', value: 98 },
       { label: 'riff writing', value: 94 },
@@ -28,7 +28,7 @@ export const MEMBERS: BandMember[] = [
     id: '3',
     name: 'Mahathi Sriraam',
     role: 'Clean Vocals',
-    image: '/images/mahati.webp',
+    image: './public/images/mahati.webp',
     stats: [
       { label: 'thickness of glasses', value: 96 },
       { label: 'sleep token glaze', value: 98 },
@@ -39,7 +39,7 @@ export const MEMBERS: BandMember[] = [
     id: '4',
     name: 'Srijan CM',
     role: 'Drums',
-    image: '/images/srijan.webp',
+    image: './public/images/srijan.webp',
     stats: [
       { label: 'love for ice cream sandwich', value: 92 },
       { label: 'urge to stay in time limit', value: 97 },
@@ -50,7 +50,7 @@ export const MEMBERS: BandMember[] = [
     id: '5',
     name: 'Sumiran Vuppuluri',
     role: 'Keys/Samples',
-    image: '/images/sumiran.webp',
+    image: './public/images/sumiran.webp',
     stats: [
       { label: 'mystery', value: 85 },
       { label: 'keys on keyboard', value: 61 },
@@ -61,7 +61,7 @@ export const MEMBERS: BandMember[] = [
     id: '6',
     name: 'Dev',
     role: 'Guitar 02',
-    image: '/images/dev.webp',
+    image: './public/images/dev.webp',
     stats: [
       { label: 'tone knowledge', value: 14 },
       { label: 'caffiene addiction', value: 82 },
@@ -72,7 +72,7 @@ export const MEMBERS: BandMember[] = [
     id: '7',
     name: 'Siddharth Aakash Rao',
     role: 'Bass',
-    image: '/images/sid.webp',
+    image: './public/images/sid.webp',
     stats: [
       { label: 'fruity', value: 97 },
       { label: 'twerk', value: 93 },
