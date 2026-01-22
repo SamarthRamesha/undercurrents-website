@@ -6,18 +6,18 @@ const Hero: React.FC = () => {
 
       {/* BACKGROUND IMAGE */}
       <div
-        className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-center md:bg-[position:50%_12%] scale-105 pointer-events-none"
-        style={{ backgroundImage: `url('/Users/macbramesha/Desktop/UndercurrentsWebsite/public/images/background.png')` }}
+        className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-[position:50%_12%] md:scale-105 pointer-events-none"
+        style={{ backgroundImage: `url('/images/background.png')` }}
       />
 
-      {/* DARK BASE OVERLAY (slight global darkening for contrast) */}
-      <div className="absolute inset-0 z-10 bg-black/20 pointer-events-none" />
+      {/* VERY LIGHT GLOBAL DARKEN (keeps contrast but not crushing) */}
+      <div className="absolute inset-0 z-10 bg-black/10 pointer-events-none" />
 
-      {/* CINEMATIC BOTTOM FADE */}
-      <div className="absolute inset-x-0 bottom-0 z-20 h-[60%] bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
+      {/* SMOOTH BOTTOM FADE INTO BLACK */}
+      <div className="absolute inset-x-0 bottom-0 z-20 h-[40%] bg-gradient-to-t from-black via-black/60 to-transparent pointer-events-none" />
 
-      {/* SUBTLE EDGE VIGNETTE */}
-      <div className="absolute inset-0 z-20 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_55%,rgba(0,0,0,0.5)_100%)]" />
+      {/* SOFT EDGE VIGNETTE (much lighter) */}
+      <div className="absolute inset-0 z-20 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_65%,rgba(0,0,0,0.35)_100%)]" />
 
       {/* CONTENT */}
       <div className="relative z-30 text-center w-full max-w-6xl mx-auto flex flex-col items-center">
