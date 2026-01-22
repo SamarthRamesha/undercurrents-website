@@ -73,27 +73,28 @@ const Members: React.FC = () => {
 
                     <div className="relative h-full w-full overflow-hidden bg-[#0a0a0a]">
 
-                      {/* IMAGE (BRIGHTENED BASELINE) */}
+                      {/* IMAGE — MUCH BRIGHTER BASE */}
                       <img 
                         src={member.image}
                         alt={member.name}
                         loading="lazy"
+                        decoding="async"
                         className={`
                           w-full h-full object-cover
                           grayscale
-                          contrast-120
-                          ${member.name === "Nimit Jain" ? "brightness-115" : "brightness-105"}
+                          contrast-110
+                          ${member.name === "Nimit Jain" ? "brightness-135" : "brightness-120"}
                         `}
                       />
 
-                      {/* SUBTLE EDGE VIGNETTE (ALL SIDES) */}
-                      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_50%,rgba(0,0,0,0.45)_100%)]" />
+                      {/* SOFT EDGE VIGNETTE (LIGHT, ALL SIDES) */}
+                      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_65%,rgba(0,0,0,0.25)_100%)]" />
 
                       {/* VERY LIGHT TOP FADE */}
-                      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/25 via-transparent to-transparent" />
+                      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/15 via-transparent to-transparent" />
 
                       {/* VERY LIGHT BOTTOM FADE */}
-                      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+                      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent" />
 
                     </div>
                   </div>
